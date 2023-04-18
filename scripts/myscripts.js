@@ -1,5 +1,5 @@
 
-
+/*
 
 function solicitarServicio() {
 
@@ -27,29 +27,96 @@ function solicitarServicio() {
 
 solicitarServicio()
 
+*/
 
+const productosEnVenta = [ 
+    { nombre: "lentes", valor: 220},
+    { nombre: "calza", valor: 80},
+    { nombre: "remera", valor: 45},
+    { nombre: "short", valor: 55},
+    { nombre: "zapatillas", valor: 280},
+    { nombre: "medias", valor: 25},
+    { nombre: "musculosa", valor: 70},
+    { nombre: "buzo", valor: 90}
+];
 
+let miCarrito = []
 
+let interaccion = prompt("¿Te gustaria comprar en nuestra tienda?")
 
+while (interaccion != "si" && interaccion != "no"){
+    alert("Estas complicado hoy eh ! ¿Si o no?")
+    interaccion = prompt("¿Te gustaria comprar en nuestra tienda?")
+}
 
+if(interaccion == "si"){
+    alert("Estos son los productos que tenemos disponibles hasta que avance el curso de JS")
 
+    let listaProductos = productosEnVenta.map((producto) => producto.nombre + " " + producto.valor + " USD ");
 
-
-
-
-//var valorPosibleVenta = 0 ;
-
-//while (valorPosibleVenta => 100 ) {
-
-    //console.log("Ha ingresado una venta carisima a nuestra tienda")
-
-   // valorPosibleVenta++;
-//}
-
-
-
-
-
-//for (var t = )while (valor1.toUpperCase() != "peñarol") {
+    alert(listaProductos.join(" - "))
     
-  //  alert("Me gusta ese quipo, arriba " + valor1 + "!!")
+
+}
+
+else if (interaccion == "no"){
+    alert("Que bajón, vos te lo perdés")
+}
+
+while(seleccion != "no"){
+    let producto = prompt("Elige un producto de nuestro catalogo")
+    let valor = 0
+
+    if(producto == "lentes" || 
+    producto == "calza" || 
+    producto == "remera" || 
+    producto == "short" || 
+    producto == "zapatillas" || 
+    producto == "medias" || 
+    producto == "musculosa" || 
+    producto == "buzo")
+
+    switch(producto) {
+
+        case "lentes":
+            valor = 220;
+            break;
+        
+        case "calza":
+                valor = 80;
+                break;
+
+                
+        case "remera":
+            valor = 45;
+            break;
+
+            
+        case "short":
+            valor = 55;
+            break;
+
+            
+        case "zapatillas":
+            valor = 280;
+            break;
+
+            
+        case "medias":
+            valor = 25;
+            break;
+
+            
+        case "musculosa":
+            valor = 70;
+            break;
+
+            
+        case "buzo":
+            valor = 90;
+            break;
+
+        
+    }
+
+}
