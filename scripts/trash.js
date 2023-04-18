@@ -1,7 +1,7 @@
 
 
 
-
+/*
 
 
 let lugarDelafila = parseInt(prompt("¿Cual es tu lugar en la fila?"));
@@ -27,3 +27,33 @@ for (let x = 1; x < 200; x++) {
 
 
 // otro ejemplo
+
+
+
+function solicitarServicio() {
+
+    let servicioSolicitado = prompt("Buen dia, ¿Que tipo de servicio estas buscando; vender, comprar o alquilar?")
+
+        if (servicioSolicitado == "comprar") {
+        alert ("Continúa por nuestro catalogo.")
+        }
+        else if (servicioSolicitado == "vender") {
+        var cantidadPosibleVenta = parseInt(prompt("¿Cuántas prendas nos quieres vender?"))
+        }
+        else if (servicioSolicitado == "alquilar") {
+        var posibleAlquiler = parseInt(prompt ("Coloca aqui el codigo de la prenda que quieres alquilar"))
+    }
+
+    console.log(servicioSolicitado)
+    console.log(cantidadPosibleVenta)
+    console.log(posibleAlquiler)
+
+    for(let i = 1; i <= cantidadPosibleVenta; i++){
+        console.log(i);
+    }
+    
+}
+
+solicitarServicio()
+
+*/

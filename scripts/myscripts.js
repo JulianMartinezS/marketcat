@@ -1,34 +1,6 @@
-
 /*
 
-function solicitarServicio() {
-
-    let servicioSolicitado = prompt("Buen dia, ¿Que tipo de servicio estas buscando; vender, comprar o alquilar?")
-
-        if (servicioSolicitado == "comprar") {
-        alert ("Continúa por nuestro catalogo.")
-        }
-        else if (servicioSolicitado == "vender") {
-        var cantidadPosibleVenta = parseInt(prompt("¿Cuántas prendas nos quieres vender?"))
-        }
-        else if (servicioSolicitado == "alquilar") {
-        var posibleAlquiler = parseInt(prompt ("Coloca aqui el codigo de la prenda que quieres alquilar"))
-    }
-
-    console.log(servicioSolicitado)
-    console.log(cantidadPosibleVenta)
-    console.log(posibleAlquiler)
-
-    for(let i = 1; i <= cantidadPosibleVenta; i++){
-        console.log(i);
-    }
-    
-}
-
-solicitarServicio()
-
-*/
-
+// Array de catalogo
 const productosEnVenta = [ 
     { nombre: "lentes", valor: 220},
     { nombre: "calza", valor: 80},
@@ -44,6 +16,8 @@ let miCarrito = []
 
 let interaccion = prompt("¿Te gustaria comprar en nuestra tienda?")
 
+//primera entrada de prompt 
+
 while (interaccion != "si" && interaccion != "no"){
     alert("Estas complicado hoy eh ! ¿Si o no?")
     interaccion = prompt("¿Te gustaria comprar en nuestra tienda?")
@@ -58,6 +32,8 @@ if(interaccion == "si"){
     
 
 }
+
+// todavia al no tener un catalogo en el html que el usuario pueda ver, le pasamos alguno productos mediante alert
 
 else if (interaccion == "no"){
     alert("Que bajón, vos te lo perdés")
@@ -75,6 +51,8 @@ while(seleccion != "no"){
     producto == "medias" || 
     producto == "musculosa" || 
     producto == "buzo")
+
+    // esta es la parte repetida del codigo pero me resulto mas facil escribirla nuevamente que acceder al array padre 
 
     switch(producto) {
 
