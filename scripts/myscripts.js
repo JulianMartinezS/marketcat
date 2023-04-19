@@ -33,7 +33,7 @@ if(interaccion == "si"){
 
 }
 
-// todavia al no tener un catalogo en el html que el usuario pueda ver, le pasamos alguno productos mediante alert
+// todavia al no tener un catalogo en el html que el usuario pueda ver, le pasamos algunos productos mediante alert
 
 else if (interaccion == "no"){
     alert("Que bajón, vos te lo perdés")
@@ -117,17 +117,16 @@ interaccion = prompt("¿Te gustaria seguir comprando?")
         alert("Eso fue todo, gracias!")
         miCarrito.forEach((chequeoCarrito) => {
             alert("Tu compra esta en la consola, presiona F12 !")
+            
             console.log(" Producto: " + chequeoCarrito.producto + " Cantidad: " + chequeoCarrito.cantidad + " Total a pagar: " + chequeoCarrito.cantidad*chequeoCarrito.valor)
     })
     break;
 }
 }
 
+// elementos del reduce! --->
 
 const valorFinal = miCarrito.reduce((ecc, el) => acc + el.valor * el.cantidad, 0)
 
 console.log("El valor final de su compra es: " + valorFinal)
 
-
-//console.log(chequeoCarrito)
-//console.log(miCarrito)
