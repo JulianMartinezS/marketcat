@@ -1,4 +1,4 @@
-/*
+
 
 // Array de catalogo
 const productosEnVenta = [ 
@@ -93,8 +93,11 @@ while(seleccion != "no"){
         case "buzo":
             valor = 90;
             break;
-
+        default:
+            break;
         
     }
+    let cantidad = parseInt(prompt("¿Cuantos articulos de este le gustaria comprar?"))
 
+    miCarrito.push(producto , cantidad, valor)
 }
