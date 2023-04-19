@@ -100,4 +100,8 @@ while(seleccion != "no"){
     let cantidad = parseInt(prompt("¿Cuantos articulos de este le gustaria comprar?"))
 
     miCarrito.push(producto , cantidad, valor)
+
+    
 }
+
+console.log(miCarrito)
