@@ -1,4 +1,4 @@
-
+{
 
 // Array de catalogo
 const productosEnVenta = [ 
@@ -39,7 +39,7 @@ else if (interaccion == "no"){
     alert("Que bajón, vos te lo perdés")
 }
 
-while(seleccion != "no"){
+while(interaccion != "no"){
     let producto = prompt("Elige un producto de nuestro catalogo")
     let valor = 0
 
@@ -50,7 +50,7 @@ while(seleccion != "no"){
     producto == "zapatillas" || 
     producto == "medias" || 
     producto == "musculosa" || 
-    producto == "buzo")
+    producto == "buzo"){
 
     // esta es la parte repetida del codigo pero me resulto mas facil escribirla nuevamente que acceder al array padre 
 
@@ -96,12 +96,38 @@ while(seleccion != "no"){
         default:
             break;
         
-    }
+        }
+
     let cantidad = parseInt(prompt("¿Cuantos articulos de este le gustaria comprar?"))
 
-    miCarrito.push(producto , cantidad, valor)
-
-    
+    miCarrito.push({producto , cantidad, valor})
+    console.log(miCarrito)
+} else {
+    alert("Ese producto no existe")
 }
 
-console.log(miCarrito)
+
+interaccion = prompt("¿Te gustaria seguir comprando?")
+
+}
+
+
+
+    while(interaccion === "no"){
+        alert("Eso fue todo, gracias!")
+        miCarrito.forEach((chequeoCarrito) => {
+            alert("Tu compra esta en la consola, presiona F12 !")
+            console.log(" Producto: " + chequeoCarrito.producto + " Cantidad: " + chequeoCarrito.cantidad + " Total a pagar: " + chequeoCarrito.cantidad*chequeoCarrito.valor)
+    })
+    break;
+}
+}
+
+
+const valorFinal = miCarrito.reduce((ecc, el) => acc + el.valor * el.cantidad, 0)
+
+console.log("El valor final de su compra es: " + valorFinal)
+
+
+//console.log(chequeoCarrito)
+//console.log(miCarrito)
